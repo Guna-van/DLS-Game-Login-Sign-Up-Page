@@ -1,175 +1,155 @@
-const toggleBtn = document.getElementById('dark-mode-toggle');
-const langSelect = document.getElementById('language-select');
-const form = document.getElementById('auth-form');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
-const rememberCheckbox = document.getElementById('remember-me');
-const toggleLink = document.getElementById('toggle-link');
-const formTitle = document.getElementById('form-title');
-const emailInput = document.getElementById('email');
-const otpInput = document.getElementById('otp');
-const submitBtn = document.getElementById('submit-btn');
-const rememberLabel = document.querySelector('.remember');
+const toggleLink = document.getElementById("toggle-link");
+const formTitle = document.getElementById("form-title");
+const submitBtn = document.getElementById("submit-btn");
+const gmailInput = document.getElementById("gmail");
+const confirmPasswordInput = document.getElementById("confirm-password");
 
+let isLogin = true;
+
+toggleLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  isLogin = !isLogin;
+
+  if (isLogin) {
+    formTitle.textContent = "Login to Play";
+    submitBtn.textContent = "Login";
+    toggleLink.textContent = "Sign Up";
+    gmailInput.style.display = "none";
+    confirmPasswordInput.style.display = "none";
+  } else {
+    formTitle.textContent = "Create an Account";
+    submitBtn.textContent = "Sign Up";
+    toggleLink.textContent = "Login";
+    gmailInput.style.display = "block";
+    confirmPasswordInput.style.display = "block";
+  }
+});
+
+// Dark mode toggle
+const darkModeBtn = document.getElementById("dark-mode-toggle");
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 // Language translations
 const translations = {
   en: {
     loginTitle: "Login to Play",
-    signupTitle: "Create an Account",
-    username: "Username",
-    password: "Password",
-    email: "Email (for Sign Up)",
-    otp: "Enter OTP",
+    signUpTitle: "Create an Account",
     loginBtn: "Login",
-    signupBtn: "Sign Up",
+    signUpBtn: "Sign Up",
     remember: "Remember Me",
-    toggleToSignup: "Don't have an account? Sign Up",
-    toggleToLogin: "Already have an account? Login"
+    toggleTextLogin: "Don't have an account? ",
+    toggleLinkLogin: "Sign Up",
+    toggleTextSignup: "Already have an account? ",
+    toggleLinkSignup: "Login",
+    username: "Username",
+    gmail: "Gmail",
+    password: "Password",
+    confirmPassword: "Confirm Password"
   },
   hi: {
     loginTitle: "खेलने के लिए लॉगिन करें",
-    signupTitle: "खाता बनाएँ",
-    username: "उपयोगकर्ता नाम",
-    password: "पासवर्ड",
-    email: "ईमेल (साइन अप के लिए)",
-    otp: "OTP दर्ज करें",
+    signUpTitle: "खाता बनाएँ",
     loginBtn: "लॉगिन",
-    signupBtn: "साइन अप",
+    signUpBtn: "साइन अप",
     remember: "मुझे याद रखें",
-    toggleToSignup: "कोई खाता नहीं है? साइन अप करें",
-    toggleToLogin: "पहले से खाता है? लॉगिन करें"
+    toggleTextLogin: "खाता नहीं है? ",
+    toggleLinkLogin: "साइन अप करें",
+    toggleTextSignup: "पहले से खाता है? ",
+    toggleLinkSignup: "लॉगिन करें",
+    username: "उपयोगकर्ता नाम",
+    gmail: "जीमेल",
+    password: "पासवर्ड",
+    confirmPassword: "पासवर्ड की पुष्टि करें"
   },
   es: {
-    loginTitle: "Iniciar sesión para jugar",
-    signupTitle: "Crear una cuenta",
-    username: "Nombre de usuario",
-    password: "Contraseña",
-    email: "Correo electrónico (para registrarse)",
-    otp: "Introduce el OTP",
+    loginTitle: "Inicia sesión para jugar",
+    signUpTitle: "Crea una cuenta",
     loginBtn: "Iniciar sesión",
-    signupBtn: "Registrarse",
+    signUpBtn: "Registrarse",
     remember: "Recuérdame",
-    toggleToSignup: "¿No tienes cuenta? Regístrate",
-    toggleToLogin: "¿Ya tienes cuenta? Inicia sesión"
+    toggleTextLogin: "¿No tienes una cuenta? ",
+    toggleLinkLogin: "Regístrate",
+    toggleTextSignup: "¿Ya tienes una cuenta? ",
+    toggleLinkSignup: "Iniciar sesión",
+    username: "Nombre de usuario",
+    gmail: "Correo electrónico",
+    password: "Contraseña",
+    confirmPassword: "Confirmar contraseña"
   },
   fr: {
-    loginTitle: "Se connecter pour jouer",
-    signupTitle: "Créer un compte",
-    username: "Nom d'utilisateur",
-    password: "Mot de passe",
-    email: "E-mail (pour s'inscrire)",
-    otp: "Entrez l'OTP",
+    loginTitle: "Connexion pour jouer",
+    signUpTitle: "Créer un compte",
     loginBtn: "Connexion",
-    signupBtn: "S'inscrire",
-    remember: "Souviens-toi de moi",
-    toggleToSignup: "Pas de compte ? S'inscrire",
-    toggleToLogin: "Vous avez déjà un compte ? Connexion"
+    signUpBtn: "S'inscrire",
+    remember: "Se souvenir de moi",
+    toggleTextLogin: "Pas de compte ? ",
+    toggleLinkLogin: "Inscrivez-vous",
+    toggleTextSignup: "Vous avez déjà un compte ? ",
+    toggleLinkSignup: "Connexion",
+    username: "Nom d'utilisateur",
+    gmail: "Email",
+    password: "Mot de passe",
+    confirmPassword: "Confirmer le mot de passe"
   },
-    te: {
+  te: {
     loginTitle: "ఆడేందుకు లాగిన్ అవ్వండి",
-    signupTitle: "ఖాతాను సృష్టించండి",
-    username: "వినియోగదారుని పేరు",
-    password: "పాస్వర్డ్",
-    email: "ఇమెయిల్ (చేరడానికి)",
-    otp: "OTP ను నమోదు చేయండి",
+    signUpTitle: "ఖాతా సృష్టించండి",
     loginBtn: "లాగిన్",
-    signupBtn: "చేరండి",
+    signUpBtn: "సైన్ అప్",
     remember: "నన్ను గుర్తుంచుకో",
-    toggleToSignup: "ఖాతా లేదా? చేరండి",
-    toggleToLogin: "ఖాతా ఉన్నదా? లాగిన్ అవ్వండి"
+    toggleTextLogin: "ఖాతా లేనవారా? ",
+    toggleLinkLogin: "సైన్ అప్ చేయండి",
+    toggleTextSignup: "ఖాతా ఉన్నదా? ",
+    toggleLinkSignup: "లాగిన్ చేయండి",
+    username: "వినియోగదారు పేరు",
+    gmail: "జిమెయిల్",
+    password: "పాస్వర్డ్",
+    confirmPassword: "పాస్వర్డ్ నిర్ధారించండి"
   }
-
-  // Add more languages as needed
 };
+const languageSelect = document.getElementById("language-select");
+const toggleText = document.querySelector(".toggle-form");
+const usernameInput = document.getElementById("username");
+const gmailInputBox = document.getElementById("gmail");
+const passwordInput = document.getElementById("password");
+const rememberLabel = document.querySelector(".remember");
 
-let isSignup = false;
-let currentLang = 'en';
-
-// Dark Mode Toggle
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  toggleBtn.textContent = document.body.classList.contains('dark')
-    ? '☀️ Light Mode'
-    : '🌙 Dark Mode';
-});
-
-// Language Change
-langSelect.addEventListener('change', () => {
-  currentLang = langSelect.value;
-  updateLanguage(currentLang);
-});
-
-// Load remembered username
-window.addEventListener('DOMContentLoaded', () => {
-  const rememberedUser = localStorage.getItem('rememberedUsername');
-  if (rememberedUser) {
-    usernameInput.value = rememberedUser;
-    rememberCheckbox.checked = true;
-  }
-  updateLanguage(currentLang); // Initial language
-});
-
-// Form submit
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const username = usernameInput.value.trim();
-  const password = passwordInput.value.trim();
-  const email = emailInput.value.trim();
-  const otp = otpInput.value.trim();
-
-  if (!username || !password) {
-    return alert(currentLang === 'hi' ? 'कृपया उपयोगकर्ता नाम और पासवर्ड भरें।' : 'Please enter username and password.');
-  }
-
-  if (rememberCheckbox.checked) {
-    localStorage.setItem('rememberedUsername', username);
-  } else {
-    localStorage.removeItem('rememberedUsername');
-  }
-
-  if (isSignup) {
-    if (!email) return alert(getText('Please enter your email', 'hi', 'कृपया ईमेल दर्ज करें।'));
-    const generatedOTP = '123456'; // Simulated OTP
-    if (!otp) {
-      alert(`OTP sent to ${email}!\nUse "123456" to simulate.`);
-      otpInput.style.display = 'block';
-      return;
-    }
-    if (otp !== generatedOTP) return alert(getText('Invalid OTP!', 'hi', 'अमान्य OTP!'));
-    alert(getText('✅ Sign up successful!', 'hi', '✅ साइन अप सफल!'));
-  } else {
-    alert(getText('✅ Login successful!', 'hi', '✅ लॉगिन सफल!'));
-  }
-
-  form.reset();
-  otpInput.style.display = 'none';
-});
-
-// Switch Login/Signup
-toggleLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  isSignup = !isSignup;
-  updateLanguage(currentLang);
-  form.reset();
-  otpInput.style.display = 'none';
-});
-
-// Translate function
 function updateLanguage(lang) {
-  const t = translations[lang] || translations.en;
+  const t = translations[lang];
 
-  formTitle.textContent = isSignup ? t.signupTitle : t.loginTitle;
+  // Update form titles and button
+  formTitle.textContent = isLogin ? t.loginTitle : t.signUpTitle;
+  submitBtn.textContent = isLogin ? t.loginBtn : t.signUpBtn;
+
+  // Inputs
   usernameInput.placeholder = t.username;
+  gmailInputBox.placeholder = t.gmail;
   passwordInput.placeholder = t.password;
-  emailInput.placeholder = t.email;
-  otpInput.placeholder = t.otp;
-  rememberLabel.innerHTML = `<input type="checkbox" id="remember-me" ${rememberCheckbox.checked ? 'checked' : ''}/> ${t.remember}`;
-  submitBtn.textContent = isSignup ? t.signupBtn : t.loginBtn;
-  toggleLink.textContent = isSignup ? t.toggleToLogin : t.toggleToSignup;
+  confirmPasswordInput.placeholder = t.confirmPassword;
+
+  // Remember Me
+  rememberLabel.childNodes[2].nodeValue = ` ${t.remember}`;
+
+  // Toggle Link and Text
+  toggleText.innerHTML = isLogin
+    ? `${t.toggleTextLogin}<a href="#" id="toggle-link">${t.toggleLinkLogin}</a>`
+    : `${t.toggleTextSignup}<a href="#" id="toggle-link">${t.toggleLinkSignup}</a>`;
+
+  // Re-attach toggle link event listener
+  document.getElementById("toggle-link").addEventListener("click", (e) => {
+    e.preventDefault();
+    isLogin = !isLogin;
+    updateLanguage(languageSelect.value);
+    gmailInputBox.style.display = isLogin ? "none" : "block";
+    confirmPasswordInput.style.display = isLogin ? "none" : "block";
+  });
 }
 
-// Helper for dynamic alert text
-function getText(english, hindi, fallback) {
-  if (currentLang === 'hi') return hindi;
-  return english;
-}
+// Listen to language change
+languageSelect.addEventListener("change", () => {
+  updateLanguage(languageSelect.value);
+});
+
+// Initialize default language
+updateLanguage("en");
