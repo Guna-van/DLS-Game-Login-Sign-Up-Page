@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DLS Game Login/Sign Up Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">DLS Game</div>
+    <div class="header-options">
+      <select id="language-select">
+  <option value="en">English</option>
+  <option value="hi">Hindi</option>
+  <option value="es">Spanish</option>
+  <option value="fr">French</option>
+  <option value="te">Telugu</option>
+</select>
+
+      <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- Main Auth Section -->
+  <main>
+    <div class="auth-container">
+      <h2 id="form-title">Login to Play</h2>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+
+        <label class="remember">
+          <input type="checkbox" id="remember-me" />
+          Remember Me
+        </label>
+
+        <button type="submit" id="submit-btn">Login</button>
+        <p class="toggle-form">
+          Don't have an account? <a href="#" id="toggle-link">Sign Up</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dream League Soccer™. All Rights Reserved.</p>
+    <p>Contact: support@dls.com | Version: 9.3.0</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

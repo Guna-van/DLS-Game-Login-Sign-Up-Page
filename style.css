@@ -1,0 +1,152 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://i.ytimg.com/vi/z5qh1WnzGJg/maxresdefault.jpg'); /* Sample DLS BG */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff000;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.header-options {
+  display: flex;
+  gap: 15px;
+}
+
+.header-options select,
+.header-options button {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color : #ffd500ea;
+  border: none;
+  cursor: pointer;
+}
+
+/* Authentication Box */
+/* Center form to left side of screen */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Always left */
+  align-items: center;
+  padding: 40px;
+}
+
+/* Form container */
+.auth-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 0 12px #000;
+  transition: all 0.5s ease;
+  margin-left: 60px;
+}
+
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.auth-container .signup-link {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  background-image: url('https://i.ytimg.com/vi/gFWooEQlB0I/maxresdefault.jpg');
+}
+
+body.dark header,
+body.dark footer,
+body.dark .auth-container {
+  background-color: rgba(30, 30, 30, 0.85);
+}
+
+body.dark input,
+body.dark button {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark .auth-container button {
+  background-color: #ffaa00;
+  color: #000;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  gap: 8px;
+  margin-right: 30px;
+  padding-right: 120px;
+  border-right: 0px;
+}
+
+.toggle-form {
+  text-align: center;
+  font-size: 13px;
+}
+
+
