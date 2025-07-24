@@ -66,8 +66,8 @@ Feel free to:
 ## 📧 Contact
 
 > For questions or logo requests, reach out via:
-- 📩 Email: `yourname@example.com`
-- 🐦 Twitter / GitHub: `@yourusername`
+- 📩 Email: `gunavanthk3@gmail.com`
+- 🐦 Twitter / GitHub: `@Guna-van`
 
 ---
 
