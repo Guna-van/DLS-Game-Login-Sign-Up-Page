@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DLS Game Login/Sign Up Page</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>DLS Game Login/Sign Up</title>
+  <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
   <!-- Header -->
@@ -22,20 +22,20 @@
     </div>
   </header>
 
-  <!-- Main Auth Section -->
+  <!-- Auth Form -->
   <main>
     <div class="auth-container">
       <h2 id="form-title">Login to Play</h2>
       <form id="auth-form">
         <input type="text" id="username" placeholder="Username" required />
-
-        <!-- Gmail Field -->
-        <input type="email" id="gmail" placeholder="Gmail" required style="display: none;" />
+        
+        <!-- Gmail (hidden by default) -->
+        <input type="email" id="gmail" placeholder="Gmail" />
 
         <input type="password" id="password" placeholder="Password" required />
-
-        <!-- Confirm Password Field (Only for Sign Up) -->
-        <input type="password" id="confirm-password" placeholder="Confirm Password" required style="display: none;" />
+        
+        <!-- Confirm Password (hidden by default) -->
+        <input type="password" id="confirm-password" placeholder="Confirm Password" />
 
         <label class="remember">
           <input type="checkbox" id="remember-me" />
@@ -43,6 +43,7 @@
         </label>
 
         <button type="submit" id="submit-btn">Login</button>
+
         <p class="toggle-form">
           Don't have an account? <a href="#" id="toggle-link">Sign Up</a>
         </p>
@@ -55,6 +56,7 @@
     <p>© 2025 Dream League Soccer™. All Rights Reserved.</p>
     <p>Contact: support@dls.com | Version: 9.3.0</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="script1.js"></script>
 </body>
 </html>
