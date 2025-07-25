@@ -40,7 +40,7 @@ This responsive authentication page mimics the style of the DLS game with a slee
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/dls-game-login-signup-page.git
+   git clone https://github.com/Guna-van/dls-game-login-signup-page.git
 
 
 ## 🙏 Credits
@@ -54,7 +54,7 @@ This responsive authentication page mimics the style of the DLS game with a slee
 
 ## 📧 Contact
 
-For any suggestions or collaboration, reach out at **support@dls.com**
+For any suggestions or collaboration, reach out at **support.ftgames.com**
 
 ---
 
