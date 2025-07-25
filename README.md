@@ -43,21 +43,26 @@ This responsive authentication page mimics the style of the DLS game with a slee
    git clone https://github.com/your-username/dls-game-login-signup-page.git
 
 
-🙏 Credits
-UI Inspired by Dream League Soccer (DLS)
+## 🙏 Credits
 
-Background images from public sources (YouTube previews)
+- UI Inspired by **Dream League Soccer (DLS)**
+- Background images from public sources (YouTube previews)
+- Icons: Unicode Emojis
+- Font: Default system font stack
 
-Icons: Unicode Emojis
+---
 
-Font: Default system font stack
+## 📧 Contact
 
-📧 Contact
-For any suggestions or collaboration, reach out at support@dls.com
+For any suggestions or collaboration, reach out at **support@dls.com**
 
-📝 License
-This project is for educational/demo purposes only.
-All rights for DLS branding belong to First Touch Games.
+---
+
+## 📝 License
+
+This project is for **educational/demo purposes only**.  
+All rights for DLS branding belong to **First Touch Games**.
+
 
 
 
