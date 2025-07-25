@@ -54,7 +54,7 @@ This responsive authentication page mimics the style of the DLS game with a slee
 
 ## 📧 Contact
 
-For any suggestions or collaboration, reach out at **support.ftgames.com**
+For any suggestions or collaboration, reach out at **support@ftgames.com**
 
 ---
 
