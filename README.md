@@ -8,7 +8,7 @@ This responsive authentication page mimics the style of the DLS game with a slee
 
 ## 🔥 Live Preview
 
-![Demo Screenshot](<img width="960" height="464" alt="Login" src="https://github.com/user-attachments/assets/74357c12-92c5-419b-9270-7363963631fb" />,<img width="960" height="490" alt="Signup Page" src="https://github.com/user-attachments/assets/382c98a4-8c81-4c55-bb34-435524363542" />,<img width="955" height="482" alt="Language" src="https://github.com/user-attachments/assets/5c536eee-984c-476d-902e-ee8f5c782dab" />)
+(<img width="960" height="464" alt="Login" src="https://github.com/user-attachments/assets/74357c12-92c5-419b-9270-7363963631fb" />,<img width="960" height="490" alt="Signup Page" src="https://github.com/user-attachments/assets/382c98a4-8c81-4c55-bb34-435524363542" />,<img width="955" height="482" alt="Language" src="https://github.com/user-attachments/assets/5c536eee-984c-476d-902e-ee8f5c782dab" />)
 
 
 
